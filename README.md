@@ -1,6 +1,8 @@
+# A bash script to build, run, stop, or remove a postgresql server in a docker container.
+
 ****
 
-# Pre-Requisites:
+## Pre-Requisites:
 
 ## Mac or Windows:
 On Mac and Windows users, do easy install of **Docker Desktop for Mac or Windows**, Docker Compose is included as part of those desktop installs.
