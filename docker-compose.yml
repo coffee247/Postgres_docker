@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+ db:
+  image: postgres
+  restart: always
+  environment:
+   POSTGRES_USER: postgres
+   POSTGRES_DB: rbims
+   POSTGRES_PASSWORD: password
+  volumes:
+    - ./postgres-data:/var/lib/postgresql/data
+    - ./2init-database.sh:/docker-entrypoint-initdb.d/2init-database.sh
+    - ./3init-database.sh:/docker-entrypoint-initdb.d/3init-database.sh
+
+  ports:
+    - 5435:5432
+    
+ adminer:
+  image: adminer
+  restart: always
+  ports:
+   - 8085:8080
+
+volumes:
+  postgres-data:
