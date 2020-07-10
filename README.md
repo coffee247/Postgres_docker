@@ -1,4 +1,4 @@
-# A bash script to build, run, stop, or remove a postgresql server in a docker container.
+# A set of command-line BASH scripts to build, run, stop, or remove a Postgresql server and database in a docker container.
 
 ****
 
