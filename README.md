@@ -22,7 +22,7 @@ Instructions are at [https://docs.docker.com/compose/install/#install-compose](h
 1. Clone or Download this repo to an empty **local** folder of your choosing.
 2. From the terminal cd into the newly created folder
 
-3. Launch a new database instance:
+3. Create a database server ... and connect to database, (Create and connect to new database if it does not exist):
 ```BASH
 ./Start.sh
 ```
