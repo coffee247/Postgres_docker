@@ -26,7 +26,7 @@ Instructions are at [https://docs.docker.com/compose/install/#install-compose](h
 ```BASH
 ./Start.sh
 ```
-4. Stop the database instance (data will be persisted across complete machine restarts)
+4. Stop the database instance and close database connection (SAFE: data will be persisted across complete machine restarts)
 ```BASH
 ./Stop.sh
 ```
