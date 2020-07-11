@@ -21,16 +21,21 @@ Instructions are at [https://docs.docker.com/compose/install/#install-compose](h
 
 1. Clone or Download this repo to an empty **local** folder of your choosing.
 2. From the terminal cd into the newly created folder
+3. Make the Start, Stop, and Remove scripts executable.
 
-3. Create a database server ... and connect to database, (Create and connect to new database if it does not exist):
+```BASH
+sudo chmod +x Start.sh Stop.sh Remove.sh
+```
+
+4. Create a database server ... and connect to database, (Create and connect to new database if it does not exist):
 ```BASH
 ./Start.sh
 ```
-4. Stop the database instance and close database connection (SAFE: data will be persisted across complete machine restarts)
+5. Stop the database instance and close database connection (SAFE: data will be persisted across complete machine restarts)
 ```BASH
 ./Stop.sh
 ```
-5. Remove the datafile permanently (the database will be completely removed)
+6. Remove the datafile permanently (the database will be completely removed)
 ```BASH
 ./Remove.sh
 ```
