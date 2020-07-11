@@ -6,5 +6,7 @@ echo "****** Stop any running servers on same port before starting up *****"
 sh ./Stop.sh
 echo "Executing Start command: " $up
 $up
-echo "Your database is available on localhost:8085"
-echo "User: postgres, Password: password"
+echo "Now open a browser and navigate to localhost:8085"
+echo "Select PostgreSQL from system dropdown"
+echo "Enter User: postgres"
+echo "Enter Password: password"
