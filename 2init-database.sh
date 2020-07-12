@@ -5,6 +5,8 @@ dbname="rbims"
 
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname $dbname <<-EOSQL
 
+     CREATE EXTENSION IF NOT EXISTS citext;
+
      CREATE TABLE backings(backing varchar(30), primary key (backing));
      INSERT into backings (backing) values ('Air'), ('Aluminum'), ('Clay');
      
