@@ -22,6 +22,65 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname $dbname <<-EOSQL
     
     CREATE TABLE shots(shot_id serial, grain varchar(30), ballistician_id integer, powder_id integer, primary key (shot_id));
     ALTER TABLE "shots" ADD FOREIGN KEY ("ballistician_id") REFERENCES "ballisticians" ("ballistician_id");
-    ALTER TABLE "shots" ADD FOREIGN KEY ("powder_id") REFERENCES "powders" ("powder_id")
+    ALTER TABLE "shots" ADD FOREIGN KEY ("powder_id") REFERENCES "powders" ("powder_id");
+    
+    CREATE TABLE us_states(ID serial, state_code char(2) NOT NULL, state_name varchar(50) NOT NULL, PRIMARY KEY (ID), unique(state_code), unique(state_name));
+
+ALTER TABLE us_states ALTER COLUMN state_name TYPE citext;  
+
+INSERT INTO US_STATES(STATE_CODE, STATE_NAME) VALUES 
+('AL','Alabama'),
+('AK','Alaska'),
+('AZ','Arizona'),
+('AR','Arkansas'),
+('CA','California'),
+('CO','Colorado'),
+('CT','Connecticut'),
+('DE','Delaware'),
+('DC','District of Columbia'),
+('FL','Florida'),
+('GA','Georgia'),
+('HI','Hawaii'),
+('ID','Idaho'),
+('IL','Illinois'),
+('IN','Indiana'),
+('IA','Iowa'),
+('KS','Kansas'),
+('KY','Kentucky'),
+('LA','Louisiana'),
+('ME','Maine'),
+('MD','Maryland'),
+('MA','Massachusetts'),
+('MI','Michigan'),
+('MN','Minnesota'),
+('MS','Mississippi'),
+('MO','Missouri'),
+('MT','Montana'),
+('NE','Nebraska'),
+('NV','Nevada'),
+('NH','New Hampshire'),
+('NJ','New Jersey'),
+('NM','New Mexico'),
+('NY','New York'),
+('NC','North Carolina'),
+('ND','North Dakota'),
+('OH','Ohio'),
+('OK','Oklahoma'),
+('OR','Oregon'),
+('PA','Pennsylvania'),
+('PR','Puerto Rico'),
+('RI','Rhode Island'),
+('SC','South Carolina'),
+('SD','South Dakota'),
+('TN','Tennessee'),
+('TX','Texas'),
+('UT','Utah'),
+('VT','Vermont'),
+('VA','Virginia'),
+('WA','Washington'),
+('WV','West Virginia'),
+('WI','Wisconsin'),
+('WY','Wyoming');
+
 EOSQL
 
