@@ -1,4 +1,5 @@
-# A set of command-line BASH scripts to build, run, stop, or remove a Postgresql server and database in a docker container.
+# A set of command-line BASH scripts to build, run, stop, or remove a Postgresql server and database in a docker container. [[1]](#1).
+
 
 ****
 
@@ -42,3 +43,7 @@ sudo chmod +x Start.sh Stop.sh Remove.sh
 
 # NOTE:
 > Even if you remove the database, ... a re-run of ./Start.sh will reconstruct the database to it's initial state.
+
+## References
+<a id="1">[1]</a> 
+[Postgres](https://hub.docker.com/_/postgres) official docker image
